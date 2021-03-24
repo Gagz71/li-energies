@@ -1,0 +1,77 @@
+{# Cette page utilise le squelette base.html.twig #}
+{% extends 'base.html.twig' %}
+
+{# Remplissage du block title avec le titre de la page #}
+{% block title %}Contactez-nous{% endblock %}
+
+{# Remplissage du block body avec le contenu de la page #}
+{% block body %}
+    <div class="container-fluid">
+        <h1 class="text-center custom-title">Contactez-nous</h1>
+
+        <div class="col-6 m-auto">
+            {# Affichage du formulaire en mode manuel (à la place de {{ form(form) }}) pour pouvoir intégrer le captcha dedans #}
+            
+            {# Ouverture du formulaire #}
+            {{ form_start(form) }}
+    
+            {# Affichage des erreurs générales du formulaire #}
+            {{ form_errors(form) }}
+    
+            {# Affichage du champ nom #}
+            {{ form_row(form.lastname) }}
+    
+            {# Affichage du champ prénom#}
+            {{ form_row(form.firstname) }}
+    
+            {# Affichage du champ email #}
+            {{ form_row(form.email) }}
+    
+            {# Affichage du champ phone #}
+            {{ form_row(form.phone) }}
+    
+            {# Affichage du champ city #}
+            {{ form_row(form.city) }}
+    
+            {# Affichage du champ department #}
+            {{ form_row(form.zipCode) }}
+    
+            {# Affichage du champ subject #}
+            {{ form_row(form.subject) }}
+    
+            {# Affichage du champ message #}
+            {{ form_row(form.message) }}
+            
+            {# Affichage du champs agreeTerms #}
+            <div class="form-group m-auto">
+                <div class="form-check">
+                    <label class="form-check-label required" for="contact_agreeTerms">En cochant cette case, vous
+                        acceptez nos <a href="{{ path('legals_conditions') }}" class="footer-link">règles et
+                            conditions</a> d'utilisations des données.</label>
+                    {{ form_row(form.agreeTerms) }}
+                    
+                </div>
+                
+            </div>
+            
+            
+            
+            {# Affichage du captcha avec la clé publique récupérée
+            directement grâce à la passerelle faite dans twig.yaml #}
+            <div class="form-group">
+                <div class="g-recaptcha m-auto" data-sitekey="{{ google_recaptcha_site_key }}"></div>
+            </div>
+            {# Affichage du bouton de validation #}
+            {{ form_row(form.save) }}
+    
+            {# Fermeture du formulaire #}
+            {{ form_end(form) }}
+        </div>
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+    {# Insertion du fichier JS dans le block stylesheets, ce n'est pas une erreur,
+    la documentation de Recaptcha préconise en effet d'intégrer ce fichier JS dans le head #}
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+{% endblock %}

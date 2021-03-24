@@ -1,0 +1,287 @@
+.bg-img-how{
+    background-image: url("../img/energies-renouvelables-4_6234444.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    background-attachment: fixed;
+}
+
+.bg-solar-energy-opacity{
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.display-2{
+    color: #5b6b73;
+    font-weight: normal;
+}
+
+/*Ma card Définition*/
+div.bg-img-how div.card.border-info.what{
+    background: transparent;
+    margin: auto;
+    text-align: center;
+    width: 50%;
+}
+.card-title.text-warning{
+    font-size: xx-large;
+}
+
+.border-info{
+    border: none;
+}
+
+/*Ma card comment ça marche*/
+div.bg-img-how div.card.border-info.how{
+    margin: auto;
+    width: 70%;
+    background: transparent;
+}
+
+/*Section autoconsommation*/
+
+.autoconso-explain{
+    width: 80%;
+}
+
+div.row.autoconsommation.flex-column h1.text-center.display-2{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.link-pop{
+    font-weight: bolder;
+
+}
+
+
+
+.title-roboto{
+    font-family: 'Roboto', serif;
+    text-transform: uppercase;
+    font-weight: 250;
+    text-align: center;
+    width: 100%;
+    height: 3rem;
+}
+
+.etape{
+    width: 100%;
+}
+
+div.card-deck.pt-5 div.card.transparent-card{
+    background-color: transparent;
+    border: darkcyan double;
+}
+.media{
+    height: 145px;
+}
+.my-icon-card{
+    padding-right: 1rem;
+}
+
+/*Partie avantages autoconso*/
+.accordion{
+    width: 60%;
+    margin: auto;
+}
+
+div#accordionExample.accordion div.card.conso-benefits{
+    background-color: transparent;
+}
+
+#dont-wait-btn{
+    color: #5b6b73;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 2px groove darkcyan;
+    border-radius: 5px;
+    padding: 15px;
+}
+#dont-wait-btn:hover{
+    color: darkcyan;
+    text-decoration: none;
+}
+
+
+/*Media Queries*/
+/*Page Comment ça marche*/
+
+/*Format Mobile*/
+@media screen and (min-width: 320px) and (max-width: 600px) {
+    /*div.bg-img-how div.card.border-info.what {*/
+    /*    margin-left: 6rem;*/
+    /*}*/
+
+    #auto-title-custom {
+        font-size: 2.5rem;
+        font-weight: 375;
+    }
+
+    #benefits-title-custom {
+        font-size: 2.18rem;
+    }
+
+    .display-4 {
+        word-wrap: normal;
+    }
+
+    .media{
+        height: 100px;
+    }
+
+    /*Mon accordeon*/
+    .my-btn-custom{
+        word-wrap: normal;
+    }
+
+    .card-body{
+        font-size: large;
+    }
+
+    .dont-wait-title{
+        font-size: 4rem;
+    }
+
+    #dont-wait-btn{
+        width: 100%;
+        font-size: 1.082rem;
+        font-weight: normal;
+    }
+
+
+    /*Page rénover*/
+    div.card.border-success.why.blue-shadow.p-3.text-right p.display-4.text-center.info-incitation{
+        font-size: 2.7rem;
+    }
+
+    #title-to-reduce{
+        font-size: 2.1rem;
+    }
+
+    #title-form-to-reduce{
+        font-size: 2.6192rem;
+    }
+
+    .button-form{
+        width: 90%;
+    }
+
+}
+
+/*Format Tablette*/
+@media screen and (min-width: 601px) and (max-width: 1006px){
+    div.row.autoconsommation.flex-column h1.text-center.display-2{
+        font-size: 3rem;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .autoconso-explain {
+        width: 90%;
+    }
+    /*Cards des etapes*/
+    div.m-auto.autoconso-explain div.row.d-flex div.card-deck.pt-5{
+        flex-direction: column;
+    }
+    div.card-deck.pt-5 div.card.transparent-card{
+        margin-right: 25px;
+        margin-bottom: 15px;
+        margin-left: 25px;
+    }
+    .media{
+        flex-direction: column;
+        height: 120px;
+    }
+
+    /*Mes icones ampoules*/
+    .my-icon-card{
+        width: 10%;
+        margin: auto;
+
+    }
+    .media-body{
+        margin: auto;
+    }
+    div.card-body div.media div.media-body p.lead{
+        text-align: center;
+    }
+    div.card-body{
+        display: flex;
+        flex-direction: column;
+    }
+    div.card-body img.card-img-middle{
+        width: 80%;
+        margin: auto;
+    }
+    #dont-wait-btn{
+        font-size: 2rem;
+    }
+
+    /*Page rénovation*/
+    .card-columns{
+        column-count: 1;
+    }
+}
+
+
+
+/*Page Pourquoi rénover*/
+.bg-img-why{
+    /*background-image: url("../img/logement-location-efficacite-energetique-decret-min.jpg");*/
+    /*background-size: cover;*/
+    /*background-repeat: no-repeat;*/
+    height: 100%;
+    width: 100%;
+    /*background-attachment: fixed;*/
+}
+.intro-why{
+    font-size: 2rem;
+    padding: 2rem;
+}
+
+.card-columns{
+    padding: 3rem;
+}
+
+div.bg-img-why div.card-columns div.card.border-success.why{
+    background: transparent;
+}
+
+div.card-columns div.card.border-success.why div.card-body h5.display-4.my-title-card-why{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    line-height: 1.2;
+}
+
+#dont-wait-btn-why{
+    color: #5b6b73;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 2px groove darkcyan;
+    border-radius: 5px;
+    padding: 10px;
+}
+#dont-wait-btn-why:hover{
+    background-color: #5b6b73;
+    color: snow;
+}
+
+.button-form{
+    width: 90%;
+}
+
+/*Media Queries Bootstrap cards raisons de rénover*/
+.card-columns{
+    @include media-breakpoint-only(lg) {
+        column-count: 4;
+    }
+    @include media-breakpoint-only(xl) {
+        column-count: 5;
+    }
+    @include media-breakpoint-only(md){
+        column-count: 4;
+    }
+}
+
+
+

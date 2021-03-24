@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello NotifMailController!{% endblock %}
+
+{% block body %}
+
+    <div class="container-fluid">
+        <h1>Nouveau contact</h1>
+        <p>Nom : {{contact.lastname}}</p>
+        <p>e-mail : {{contact.email}}</p>
+        <p>Message : {{contact.message|raw}}</p>
+    </div>
+
+{% endblock %}

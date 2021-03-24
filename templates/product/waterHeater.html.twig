@@ -1,0 +1,236 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Production d'eau chaude{% endblock %}
+
+{% block stylesheets %}<link rel="stylesheet" href="{{ asset('css/style-p-elec-water.css') }}">{% endblock %}
+
+{% block body %}
+
+    <div class="container-fluid">
+    
+        <h1 class="text-center display-3 main-title-elec ">Produisez et consommez votre propre eau chaude</h1>
+       
+        <!--Contenu sur image fixed-->
+        <div class="bg-img-water row flex-column">
+            <div class="bg-electricity-opacity p-1">
+
+            
+    
+                <h2 class="text-center display-4 load-hidden title-to-responsive ">Réalisez des économies en produisant
+                    votre eau chaude sanitaire</h2>
+                
+                <div class="row mb-5 ">
+                    
+                    <div class="col-4 d-flex justify-content-end">
+                        <img src="{{ asset('img/chauffe-eau thermodyamique - INOLYS.png') }}"
+                            alt="chauffe-eau-thermodynamique" class="load-speed-hidden">
+                    </div>
+        
+                    <!--ma card présentation système-->
+                    <div class="card col-6  m-auto card-system-psentation load-speed-hidden">
+                        <div class="card-body">
+                            <h5 class="display-4 text-center">CHAUFFE-EAU THERMODYNAMIQUE</h5>
+                            <p class="lead text-center">L'eau chaude sanitaire représentant une part importante dans les
+                                dépenses d'énergies quotidiennes, <span class="li-energies"> Li.Energies</span> vous
+                                propose une solution innovante optimale, alliant confort et économies : le chauffe-eau thermodynamique !</p>
+                            <p class="lead text-center">Parce que le chauffe-eau thermodynamique utilise l’énergie durable, propre et gratuite de l’air ambiant pour chauffer votre eau sanitaire
+                                , il représente une solution économique et rentable pour la production de votre eau chaude sanitaire.<br>
+                                Compatible à l' <a style="text-decoration: underline;text-decoration-style: dotted;
+                                color:black;" href="{{ path('electricity_production') }}">équipement solaire</a>, il vous permet de combiner deux sources d’énergies renouvelables et de réaliser des économies
+                                d’énergies considérables !</p>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="row m-auto">
+                    <h2 class="display-4 load-hidden m-auto">REALISEZ JUSQU'A 75% D'ENERGIES !</h2>
+                </div>
+                
+                <div class="row mb-5 flex-column">
+                    <div class="col-6 m-auto pt-5">
+                        <h2 class="display-4 load-hidden text-center title-to-enlarge">Fonctionnement</h2>
+                    </div>
+                    
+                    <div class="row mt-5">
+                        <!--Mon shéma d'explication-->
+                        <div class="col-6 d-flex overlay">
+                            <img src="{{ asset('img/chauffe-eau fonctionnenment.png') }}"
+                                 alt="fonctionnement-chauffe-eau" class="load-speed-hidden m-auto overlay-img">
+                        </div>
+                        <!--mon explication-->
+                        <div class="col-6 load-speed-hidden">
+                            <h2 class="display-4 text-center">Produire de l'eau chaude avec de l'air !</h2>
+                            <p class="lead">Avec un chauffe-eau thermodynamique, les calories de l'air extérieur sont aspirées, transformées et
+                                utilisées pour chauffer l'eau contenue dans le réservoir.<br>
+                                Même si cela peut paraître complexe, le principe est réalité similaire à celui d'une
+                                pompe à chaleur.<p>
+                            <p class="lead"><span class="li-energies">LI.ENERGIES</span> vous explique son
+                                    fonctionnement par étapes:</p>
+                            
+                            <ul class="list-group list-group-flush lead load-speed-hidden">
+                                <li class="list-group-item">L'air ambiant est absorbé dans le chauffe-eau, ce qui permet de chauffer le fluide frigorigène contenu dans l'évaporeur du système.</li>
+                                <li class="list-group-item">Ce fluide est ensuite conduit vers le compresseur, qui augmente sa température.</li>
+                                <li class="list-group-item">Le fluide transmet ensuite la chaleur accumulée à l'au présente dans le réservoir, grâce au condensateur.</li>
+                                <li class="list-group-item">L'eau chauffée circule et se consomme au sein de votre foyer.</li>
+                                <li class="list-group-item">Le fluide ressort refroidi, grâce au détendeur.</li>
+                                <li class="list-group-item">L'air est finalement expulsé, un nouveau cycle peu débuter !</li>
+                            </ul>
+                            
+                            <p class="lead load-speed-hiddenpt-5">Le chauffe-eau thermodynamique puise ainsi dans une source
+                                d'énergie inépuisable et complètement gratuite : l'air.</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--2e partie: contenu sous la div image fixed-->
+        <div class="row flex-column">
+            
+            <div class="col-8 m-auto pt-5">
+                <h2 class="display-4 load-hidden text-center">UNE SOLUTION OPTIMALE QUI ALLIE ECONOMIES ET ECOLOGIE</h2>
+            </div>
+            
+            <!--ma citation-->
+            <div class="col-6 m-auto">
+                <blockquote class="blockquote text-center load-hidden mt-5">
+                    <p class="mb-0 lead ">Pour l’eau chaude sanitaire, les chauffes-eau thermodynamiques sont les systèmes les plus performants.</p>
+                    <footer class="blockquote-footer">ADEME - Septembre 2018 <cite title="Source Title">L’habitat : Se chauffer mieux et moins cher</cite></footer>
+                </blockquote>
+            </div>
+    
+            <!--Ma partie avantage-->
+            <div class="col-6 m-auto load-speed-hidden">
+                <p class="text-center pt-5 li-energies">Installation, consommation, économies :</p>
+                <p class="lead text-center"><span class="li-energies">LI.energies</span> vous fais découvrir les principaux atouts de ce système révolutionnaire de production d’eau chaude sanitaire.</p>
+                
+                <!--mon accordeon-->
+                <div class="accordion lead load-speed-hidden" id="accordionExample">
+                    
+                    <div class="card transparent-card">
+                        <div class="card-header" id="headingOne">
+                            <h2 class="mb-0">
+                                <button class="btn my-accordion-btn btn-block text-center my-accordion-btn"
+                                        type="button"
+                                        data-toggle="collapse"
+                                        data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Un système économique
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <p class="">
+                                    Les français dépensent aujourd’hui autant pour chauffer leur logement que
+                                    pour leurs besoins en eau chaude.<br>
+                                    La recherche d’économies est donc un facteur clé lors du choix d’un nouvel appareil.
+                                </p>
+                                <p class="">
+                                Equipé d’une pompe à chaleur aérothermique, le chauffe-eau thermodynamique permet de consommer jusqu’à 3 fois
+                                    moins d’énergie qu’avec un chauffe-eau électrique.</p>
+                                <p>
+                                Son COP (coefficient de performances) étant situé entre 3 et 4, l’eau chaude récupère donc 3 à 4 kWh pour 1 kWh
+                                d’électricité consommée, ce qui vous permet ainsi de réaliser jusqu’à 75% d'économies sur votre facture ! </p>
+                                <p class="">
+                                    Son prix d’achat est accessible : aux alentours de <a title="En moyenne, un
+                                chauffe-eau thermodynamique est amorti en moins de 10 ans.">3000€</a>.<br>
+                                    De plus il peut être réduit grâce au crédit d’impôt.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card transparent-card">
+                        <div class="card-header" id="headingTwo">
+                            <h2 class="mb-0">
+                                <button class="btn my-accordion-btn btn-block text-center collapsed" type="button"
+                                        data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Un système écologique
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <p>Parce qu'il répond aux critères de la <a href="https://www.e-rt2012
+                                .fr/explications/">Norme RT 2012</a>, le chauffe-eau thermodynamique est couramment
+                                    proposé dans la construction neuve.<br>
+                                    Considéré et classifié comme une énergie renouvelable, son principe de fonctionnement repose sur l’utilisation d'une source d'énergie inpéuisable et
+                                    renouvelable: l'air.</p>
+                                <p>Il récupère ainsi les calories de l'air libérées par vos appareils électroménagers (tels que le congélateur ou la machine à laver) sans rejeter aucun gaz à
+                                    effet de serre dans l’atmosphère.</p>
+                                <p>En effet, d'après les fabricants, en dehors des périodes hivernales, les rejets de CO2 émis par un chauffe-eau thermodynamique sont 10 fois moins importants
+                                    que ceux provenant d’un chauffe-eau classique qui utilise une énergie fossile telle que le gaz ou le fioul.</p>
+                                <p>Parce qu'il n'est pas dépendant des conditions, il vous permet de bénéficier d’un confort optimal durant chaque saison, ce qui constitue un précieux atout pour la préservation de l’environnement.
+                                </p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card transparent-card">
+                        <div class="card-header" id="headingThree">
+                            <h2 class="mb-0">
+                                <button class="btn my-accordion-btn btn-block text-center collapsed" type="button"
+                                        data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Un système simple à installer
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <p>L’un des principaux avantages d’un chauffe-eau thermodynamique réside dans sa simplicité d’installation.</p>
+                                <p>Placé dans une pièce non habitable, non chauffée et hors gel, il possède très peu de contraintes, avec un simple raccordement au réseau
+                                    existant.</p>
+                                <p>Puisqu’il n’a pas besoin d’un système d’évacuation des fumées, il est donc
+                                inutile de prévoir d’importants travaux de réaménagement
+                                    pour la mise en place d’un tel appareil.</p>
+                                <p>De plus, sa capacité moyenne étant de 270 litres, le chauffe-eau thermodynamique
+                                    s'adapte à vos besoins.<br>
+                                    Réglable manuellement, il vous offre la possibilité de le programmer en fonction des besoins quotidiens,selon les différents moments de la journée. </p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="card transparent-card">
+                        <div class="card-header" id="headingFour">
+                            <h2 class="mb-0">
+                                <button class="btn my-accordion-btn btn-block text-center collapsed" type="button"
+                                        data-toggle="collapse" data-target="#collapseFour" aria-expanded="false"
+                                        aria-controls="collapseFoure">
+                                    Un Système éligible au crédit d'impôt
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                             data-parent="#accordionExample">
+                            <div class="card-body">
+                                <p>L’achat d’un chauffe-eau thermodynamique est éligible au crédit d’impôt pour la transition énergétique (CITE) proposé par l’État dans le cadre
+                                    d’une rénovation.</p>
+                                <p>La mise en place d’un tel équipement estampillé NF par un professionnel agréé RGE permet d’accéder à un crédit d’impôt de 30 %.</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    
+                    
+                    
+                </div>
+            </div>
+            
+                
+            
+            
+            
+        </div>
+        
+        <h1 class="display-4 text-center mt-5 load-speed-hidden">N'attendez plus !</h1>
+    
+        <div class="last-section-contact d-flex">
+            <a href="/contactez-nous" class="blue-shadow load-hidden" id="last-button">Je change mon chauffe-eau !</a>
+        </div>
+        
+    </div>
+
+{% endblock %}

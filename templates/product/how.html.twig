@@ -1,0 +1,366 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Comment ça marche?{% endblock %}
+
+{% block stylesheets %}<link rel="stylesheet" href="{{ asset('css/style-p-how-why.css') }}">{% endblock %}
+{% block body %}
+    
+    <div class="container-fluid">
+        
+        <div class="row flex-column">
+            <h1 class="col-12 text-center display-2">Energie Solaire</h1>
+            <h2 class="col-12 text-center display-4">Laissez le soleil vous éclairer !</h2>
+        </div>
+        
+        
+        <div class="row solar-energy">
+            <div class="bg-img-how">
+                <div class="bg-solar-energy-opacity p-1">
+
+                
+                <!--Ma card de définition-->
+                <div class="card border-info what">
+                    <div class="card-body">
+                        <h5 class="display-4 load-hidden">Qu'est-ce que c'est ?</h5>
+                        <p class="lead load-speed-hidden">A l'origine du cycle de l'eau, du vent et de la photosynthèse
+                            réalisée
+                            par le règne végétal, dont dépend le règne animal via les chaînes alimentaires, le soleil
+                            demeure depuis toujours notre plus grande source d'énergie.<br> Bien que située à plus de
+                            149,6 millions km, la lumière des rayons de notre étoile se propage en telle quantité
+                            qu'on estime à environ 170 millions de gigawatt de puissance reçu en permanence sur Terre
+                            . <br>Cette inépuisable ressource naturelle est ensuite convertit en source d'électricité
+                            grâce aux panneaux photovoltaïques ou centrales solaires thermiques.</p>
+                        
+                    </div>
+                </div>
+                
+                <div class="card border-info how mb-3">
+                    <div class="card-body">
+                        <h5 class="display-4 text-center load-hidden">Comment ça marche ? </h5>
+                        <p class="lead text-center load-speed-hidden">Installés sur toit ou au sol, les
+                        panneaux solaires, composés de cellules photovoltaïques, vont capter les rayonnements du soleil et les
+                        transformer en courant alternatif utilisable, grâce à un onduleur.<br> L'équipement vous permet
+                        de générer ainsi votre propre électricité!<br> Cette électricité est ensuite directement
+                        consommée, ou totalement vendue sur le réseau.
+                        </p>
+                    </div>
+                    <div class="d-flex pb-3">
+                        <img src="{{ asset('img/shéma explicatif .png') }}" class="m-auto load-speed-hidden" alt="schéma
+                        explicatif">
+                    </div>
+                    
+                </div>
+                </div>
+            </div>
+        </div>
+    
+        <!--Ma partie autoconsommation-->
+        <div class="row autoconsommation flex-column">
+            
+            
+            <h1 class="text-center display-2 load-hidden" id="auto-title-custom">Choisir l'autoconsommation</h1>
+    
+            <div class="m-auto autoconso-explain">
+                <!--Première partie autoconso-->
+                <h1 class="display-4 load-speed-hidden">Consommez du soleil !</h1>
+                <p class="lead load-speed-hidden">L'autoconsommation photovoltaïque, c'est produire sa propre
+                    électricité grâce aux
+                    panneaux solaires, et la consommer directement sur le lieu de production en fonction de vos
+                    besoins. <br> Ainsi vous transformez votre maison ou vos locaux professionnels en véritable
+                    <a style="text-decoration: underline;text-decoration-style: dotted;" class="link-pop" role="button"
+                       data-toggle="popover" title="A noter" data-content="Les panneaux solaires réagissent à la clarté et à la
+                        luminosité, et non au beau-temps. Ils sont donc tout aussi efficaces dans les régions où le
+                        ciel est souvent gris.">générateur d'électricité !</a>
+                
+                <p class="lead load-speed-hidden">L'électricité produite par l'installation photovoltaïque est injectée
+                    directement dans votre installation électrique afin d'alimenter l'ensemble des appareils
+                    de la maison (chauffage, lumière, électroménager, etc ..). Le logement fonctionne ainsi
+                    en auto-consommation, devenant complètement autonome.<br>Le surplus d'électricité produit est ensuite soit
+                    stockée pour une <a style="text-decoration: underline;text-decoration-style: dotted;" class="link-pop"
+                    role="button" data-toggle="popover" title="Avec batterie" data-content="L'énergie non consommée
+                    pendant la journée est stockée dans une batterie Stocklys,ce qui permettra sa restitution lorsque
+                     vous en aurez le plus besoin.">consommation ultérieure</a>, soit <a style="text-decoration:
+                     underline;text-decoration-style: dotted;" class="link-pop" role="button" data-toggle="popover"
+                     title="Avec revente" data-content="L'énergie non consommée est alors injecté sur le réseau
+                     de distribution national. Ce surplus peut être vendue ou donné (selon le contrat), partiellement
+                      ou totalement. ">revendue sur le réseau</a>.</p>
+                
+                <!--2e partie autoconso-->
+                <hr class="my-4">
+                <h1 class="display-4 load-hidden">Les Etapes</h1>
+                <div class="row  d-flex">
+    
+                    
+    
+                    
+                    <div class="card-deck pt-5">
+                        
+                        <div class="card transparent-card blue-shadow load-very-speed-hidden">
+                            <div class="card-body">
+                                
+                                <div class="media">
+                                    <img src="{{ asset('img/Comment/ampoule-verte.png') }}" class="my-icon-card img-fluid"
+                                         alt="ampoule verte">
+                                    <div class="media-body">
+                                        <p class="lead" style="font-size: 1.25rem;font-weight: bolder;">Vous
+                                            produisez votre propre électricité</p>
+                                    </div>
+                                </div>
+
+                                <img src="{{ asset('img/Comment/fonctionnement-panneaux-solaires-1-1.jpg') }}"
+                                     class="card-img-middle img-fluid" alt="fonctionnement panneaux solaires">
+                                
+                                <p class="card-text lead" style="font-size: 1rem;">Les capteurs solaires contenu dans vos panneaux, sont
+                                    composés de cellules qui convertissent les rayons du soleil en électricité.</p>
+                                
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="card transparent-card blue-shadow load-very-speed-hidden">
+                            <div class="card-body">
+                                
+                                <div class="media">
+                                    <img src="{{ asset('img/Comment/ampoule-verte.png') }}" class="my-icon-card img-fluid "
+                                         alt="ampoule verte">
+                                    <div class="media-body">
+                                        <p class="lead" style="font-size: 1.25rem;font-weight: bolder;">Vous
+                                            consommez immédiatement et stockez ou revendez le surplus</p>
+                                    </div>
+                                </div>
+
+                                <img src="{{ asset('img/Comment/fonctionnement-panneaux-solaires-2.jpg') }}"
+                                     class="card-img-middle img-fluid" alt="fonctionnement panneaux solaires">
+                                
+                                <p class="card-text lead" style="font-size: 1rem;">La journée, l’électricité est directement injectée dans
+                                    votre logement pour répondre à ses besoins. Le surplus est stocké dans la batterie
+                                    (autoconso totale) ou revendu</p>
+                                
+                            </div>
+                        </div>
+
+
+                        <div class="card transparent-card blue-shadow load-very-speed-hidden">
+                            <div class="card-body">
+        
+                                <div class="media">
+                                    <img src="{{ asset('img/Comment/ampoule-verte.png') }}" class="my-icon-card img-fluid"
+                                         alt="ampoule verte">
+                                    <div class="media-body">
+                                        <p class="lead" style="font-size: 1.25rem;font-weight: bolder;">
+                                            Vous consommez votre énergie stockée </p>
+                                    </div>
+                                </div>
+
+                                <img src="{{ asset('img/Comment/fonctionnement-panneaux-solaires-3.jpg') }}"
+                                     class="card-img-middle img-fluid" alt="fonctionnement panneaux solaires">
+                                
+                                <p class="card-text lead" style="font-size: 1rem;">L’énergie non consommée est restituée lorsque les
+                                    panneaux ne produisent plus grâce à la batterie. Vous consommez ainsi la totalité de l’énergie produite et évitez toute perte d’énergie diluée dans le réseau.</p>
+                                
+                            </div>
+                        </div>
+
+                        <div class="card transparent-card blue-shadow load-very-speed-hidden">
+                            <div class="card-body">
+        
+                                <div class="media">
+                                    <img src="{{ asset('img/Comment/ampoule-verte.png') }}" class="my-icon-card img-fluid"
+                                         alt="ampoule verte">
+                                    <div class="media-body">
+                                        <p class="lead" style="font-size: 1.25rem;font-weight: bolder;">Vous ne
+                                            consommez que l'essentiel sur le réseau</p>
+                                    </div>
+                                </div>
+
+                                <img src="{{ asset('img/Comment/fonctionnement-panneaux-solaires-4.jpg') }}"
+                                     class="card-img-middle img-fluid" alt="fonctionnement panneaux solaires">
+                                
+                                <p class="card-text lead" style="font-size: 1rem;">Une fois la batterie déchargée ou lorsque les panneaux
+                                    ne sont plus alimentés par la lumière du soleil, le réseau prend le relais
+                                    pour réaliser l'appoint nécessaire.</p>
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <hr class="my-4">
+                
+                <!--Troisième partie autoconso-->
+                <h1 class="display-4 load-hidden" id="benefits-title-custom">Les avantages de l'autoconsommation</h1>
+                <p class="lead load-speed-hidden">Ainsi vous l'aurez compris, l'autoconsommation énergétique présente
+                    de nombreux intérêts, tant pour les
+                    particuliers que les professionnels.</p>
+    
+                <div class="accordion blue-shadow pt-5 load-speed-hidden" id="accordionExample">
+                    
+                    <div class="card conso-benefits">
+                        <div class="card-header" id="headingOne">
+                            <h2 class="mb-0">
+                                <button class="btn text-uppercase text-center  btn-block text-left my-btn-custom"
+                                        type="button"
+                                        data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Exit les intermédiaires extérieurs pour votre énergie !
+                                </button>
+                            </h2>
+                        </div>
+            
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <div class="card-body lead text-center">
+                                En devenant votre principale source d’énergie, vous accédez à l’autonomie et
+                                indépendance .<br>
+                                Adhérer à cette nouvelle manière de produire et de consommer marque votre
+                                indépendance énergétique.<br>
+                                Une bonne façon de s'affranchir des fournisseurs extérieurs et de devenir son propre fournisseur
+                                d'énergie !
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card conso-benefits">
+                        <div class="card-header" id="headingTwo">
+                            <h2 class="mb-0">
+                                <button class="btn text-uppercase text-center  btn-block text-left collapsed my-btn-custom"
+                                        type="button"
+                                        data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Exit les factures !
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                            <div class="card-body lead text-center">
+                                Avec l'autoconsommation, vous ne subissez plus votre facture d’électricité : vous la
+                                maîtrisez !<br>
+                                Il est évident que si vous décidez de passer à l’autoconsommation, vous diminuerez nettement vos factures d’énergie, voir
+                                les supprimerez définitivement de vos charges mensuelles.<br>
+                                En effet, autoconsommer son énergie grâce aux panneaux solaires permet de faire jusqu’à 40% d’économies sur sa facture
+                                d’électricité.<br> Un argument de taille lorsque l’on sait que la facture d’électricité
+                                des français a augmenté de 50% en dix ans, selon le TRV.<br>
+                                En vous équipant de panneaux solaires, vous bénéficiez d’un prix au kWh plus bas et réduisez ainsi l’impact des hausses annuelles d’EDF
+                                sur votre pouvoir d’achat.<br>
+                                N'attendez plus, réalisez des économies financières considérables !
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card conso-benefits">
+                        <div class="card-header" id="headingThree">
+                            <h2 class="mb-0">
+                                <button class="btn text-uppercase text-center  btn-block text-left collapsed my-btn-custom"
+                                        type="button"
+                                        data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Production écologique de l'électricité !
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                            <div class="card-body lead text-center">
+                                En optant pour les énergies positives, vous agissez pour l'écologie !<br>
+                                Vous faites un geste pour l’environnement en consommant de l’électricité 100 % renouvelable et en
+                                allégeant le réseau électrique.<br>
+                                Dans le même état d’esprit,  l’énergie que vous produirez et consommerez sera verte, et fera appel
+                                à la nature contrairement à l’électricité distribuée par les différents fournisseurs qui provient le
+                                plus souvent de centrales nucléaires.<br>
+                                De ce fait,  vous participez à la transition énergétique et vous aidez les générations futures à vivre
+                                dans un monde plus éco-responsable.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card conso-benefits">
+                        <div class="card-header" id="headingFour">
+                            <h2 class="mb-0">
+                                <button class="btn text-uppercase text-center  btn-block text-left collapsed my-btn-custom"
+                                        type="button"
+                                        data-toggle="collapse"
+                                        data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Allegement du réseau électrique !
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                            <div class="card-body lead text-center">
+                                L’autoconsommation énergétique est par ailleurs un enjeu important pour la transition énergétique : en décidant quand, quoi et combien
+                                consommer, vous jouez un rôle dans l’évolution de la consommation énergétique globale
+                                .<br>
+                                Le fait que l’énergie soit produite et consommée simultanément au même endroit est une bonne démarche dans la mesure où le réseau
+                                est alors considérablement allégé.<br>
+                                En effet, la production sur site d’une énergie solaire, consommée directement, permet de diminuer l’énergie consommée
+                                sur le réseau, jusqu’à 30% !<br>
+                                Sachez également que plus il y a d’habitants dans la « maison de production d’énergie », autrement dit plus il y a d’énergie
+                                consommée, plus vite l’équipement d’autoconsommation sera rentabilisé.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card conso-benefits">
+                        <div class="card-header" id="headingFive">
+                            <h2 class="mb-0">
+                                <button class="btn btn-block text-uppercase text-center  text-left collapsed my-btn-custom"
+                                        type="button"
+                                        data-toggle="collapse"
+                                        data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    Cadre Légal incitatif
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
+                             data-parent="#accordionExample">
+                            <div class="card-body lead text-center">
+                                Vous bénéficiez d’aides financières de l’Etat !<br>
+                                Vos installations vertes et votre principe d'autoconsommation entrent dans le plan d’action du ministère de l’écologie : vous êtes
+                                donc récompensés en crédit d'impôt et en primes !
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <hr class="my-4">
+                <h1 class="display-3 text-center dont-wait-title load-hidden">N'attendez plus !</h1>
+                <div class="last-section-contact d-flex">
+                    <a href="{{ path('contact') }}" class="load-speed-hidden blue-shadow display-4"
+                       id="dont-wait-btn">Je passe à
+                        l'autoconsommation !</a>
+                </div>
+            </div>
+    
+            
+        </div>
+        
+      
+
+      
+
+
+
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        $(function () {
+            $('[data-toggle="popover"]').popover()
+        });
+        
+        
+        //Animation sur mes explications
+        // document.querySelector('#first-step').addEventListener('mouseenter', function(){
+        //
+        //     let newTitle = document.createElement('p');
+        //     newTitle.textContent = ''
+        //     newTitle.classList.add('lead');
+        //     newTitle.style.fontSize = '1.5rem';
+        //     newTitle.style.fontWeight = 'bold';
+        //
+        //     let newImg = document.createElement('img');
+        //     newImg.src = 'img/Comment/fonctionnement-panneaux-solaires-1-1.jpg';
+        //     newImg.style.height = '100px';
+        //     document.querySelector('#first-step').lastElementChild.after(newImg);
+        // });
+        
+        
+    </script>
+{% endblock %}

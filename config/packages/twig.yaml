@@ -1,0 +1,13 @@
+twig:
+    default_path: '%kernel.project_dir%/templates'
+    debug: '%kernel.debug%'
+    strict_variables: '%kernel.debug%'
+    exception_controller: null
+    # Tous les formulaires généré par le site seront dans formulaire Bootstrap
+    form_themes: ['bootstrap_4_layout.html.twig']
+    # Paramètre disponibles dans toutes les vues twig
+    globals:
+        site_name: 'Li.Energies'
+        google_recaptcha_site_key: '%env(GOOGLE_RECAPTCHA_SITE_KEY)%'
+        google_recaptcha_private_key: '%env(GOOGLE_RECAPTCHA_PRIVATE_KEY)%'
+        webmaster: 'Douns Manhs'

@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Connexion{% endblock %}
+
+{% block body %}
+    
+    <div class="container-fluid">
+        {# Affichage de tous les flash messages de type "success" #}
+        {% for message in app.flashes('success') %}
+            <div class="row">
+                <div class="m-auto">{{ message }}</div>
+            </div>
+        {% endfor %}
+        
+        <div class="row">
+            
+            <div class="col-5 m-auto">
+        
+                <form method="post">
+                    {% if error %}
+                        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                    {% endif %}
+            
+            
+            
+                    <h1 class="text-center custom-title">Connexion à mon espace client</h1>
+            
+                    <label for="inputEmail">Email</label>
+                    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" required autofocus>
+                    <label for="inputPassword">Mot de passe</label>
+                    <input type="password" name="password" id="inputPassword" class="form-control" required>
+            
+                    <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+            
+                  
+                    <div class="checkbox mb-3">
+                        <label>
+                            <input type="checkbox" name="_remember_me"> Maintenir ma connexion
+                        </label>
+                    </div>
+                    
+            
+                    <div class="row">
+                        <button class="btn button-form mt-5" type="submit">
+                            Je me connecte
+                        </button>
+                    </div>
+                    
+                </form>
+    
+            </div>
+        </div>
+    
+        
+        
+        
+    </div>
+
+{% endblock %}

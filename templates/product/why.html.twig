@@ -1,0 +1,167 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Pourquoi rénover?{% endblock %}
+
+{% block stylesheets %}<link rel="stylesheet" href="{{ asset('css/style-p-how-why.css') }}">{% endblock %}
+
+{% block body %}
+
+    <div class="container-fluid">
+    
+        <h1 class="text-center display-2">Energie Solaire</h1>
+        <h2 class="text-center display-4">Pourquoi rénover son habitat ?</h2>
+
+        <div class="row">
+            <div class="bg-img-why">
+    
+                <p class="lead text-center intro-why load-hidden">
+                    De plus en plus de français sont tentés par l'autoconsommation d'origine photovoltaïque, sans vraiment mesurer les réelles bénéfices
+                    de ce nouveau système de consommation.
+                    <br>Li-Energies vous aide à y voir plus clair en vous livrant 5 bonnes raisons d'entreprendre des
+                    travaux de rénovations énergétiques.
+                </p>
+   
+                <div class="card-columns">
+                    <!--card valorisation bien-->
+                    <div class="card border-success why blue-shadow load-speed-hidden">
+                    <img src="{{ asset('img/4546.jfif') }}" class="card-img-top" alt="valorisation bien immobilier">
+                    <div class="card-body">
+                        <h5 class="display-4 my-title-card-why text-center">Augmentez la valeur de votre bien
+                            immobilier !</h5>
+                        <p class="card-text lead text-center">La performance énergétique de votre habitat représente un
+                            critère
+                            très important pour les futurs acheteurs.</p>
+                        <p class="card-text lead text-center"> En effet, même si vous ne souhaitez pas vendre votre
+                            logement tout de suite, en améliorant sa performance énergétique, totalement ou partiellement, vous augmentez sa
+                            valeur sur le marché.</p>
+                        <p class="card-text lead text-center">La rénovation énergétique devient ainsi un investissement qui vous garantis une réelle hausse de votre capital.</p>
+                    </div>
+                </div>
+    
+                    <!--Ma card INcitation-->
+                    <div class="card border-success why blue-shadow p-3 text-right load-speed-hidden">
+                        <p class="lead text-center">Vous ne savez pas par où commencer ? </p>
+                        <p class="display-4 text-center info-incitation"><span class="li-energies">Li.Energies</span> effectue un premier bilan chez
+                            vous, gratuit, et sans
+                            engagement</p>
+                        <p class="lead text-center pt-5"><a href="{{ path('contact') }}" class=""
+                                                            id="dont-wait-btn-why">N'attendez plus !</a></p>
+    
+                    </div>
+                    
+                    <!--card économie-->
+                    <div class="card border-success why blue-shadow load-speed-hidden">
+                        <img src="{{ asset('img/654.png') }}" class="card-img-top" alt="empilement de pièces">
+                        <div class="card-body">
+                            <h5 class="display-4 my-title-card-why text-center">Faites des économies !</h5>
+                            <p class="card-text lead text-center">En réalisant des travaux de rénovation, vous diminuez les besoins énergétiques de
+                                votre logement, ce qui permet une réduction considérable et durable de vos factures sans nuire à votre confort quotidien.</p>
+                            <p class="card-text lead text-center">Le chauffage est le premier poste de consommation
+                                énergétique d'un foyer.<br>
+                                Selon son efficacité, il peut représenter un poste de dépense important, tout comme
+                                l'électricité.</p>
+                            <p class="card-text lead text-center">Il est temps de penser à une solution plus économique !</p>
+                            <p class="card-text lead text-center">Des solutions très performantes existent aujourd'hui pour vous assurer un confort
+                                thermique optimal et des économies d'énergie.</p>
+                            <p class="card-text lead text-center">La mise en place de ces solutions bénéficie en outre, d'un cadre législatif
+                                incitatif, et vous permet ainsi de disposer de nombreuses aides financières de l'Etat !</p>
+                        </div>
+                    </div>
+    
+                    <!--Ma card de citation-->
+                    <div class="card border-success why blue-shadow p-3 text-right load-speed-hidden">
+                        <blockquote class="blockquote mb-0">
+                            <p>La norme ne doit plus être l'énergie nucléaire, mais les énergies renouvelables[...] On a
+                                fait des choix stratégiques sur la transition énergétique et ils doivent être appliqués.
+                                C'est un bouleversement complet de notre modèle.
+                            </p>
+                            <footer class="blockquote-footer">
+                                <small class="text-muted">
+                                    Nicolas Hulot, ex-ministre de la Transition écologique, dans un entretient publié
+                                    le 14 novembre 2017 par le <cite title="Source Title">Financial Times</cite>
+                                </small>
+                            </footer>
+                        </blockquote>
+                    </div>
+    
+                    <!--card confort-->
+                    <div class="card border-success why blue-shadow load-speed-hidden">
+                        <img src="{{ asset('img/confort-thermique.jpg') }}" class="card-img-top" alt="confort-thermique">
+                        <div class="card-body">
+                            <h5 class="display-4 my-title-card-why text-center">Améliorez votre confort !</h5>
+                            <p class="card-text lead text-center">Vos vitres sont glacées en hiver ? Vous avez trop chaud
+                                en été ? Trop froid en hiver ?<br>Une bonne isolation peut résoudre vos problèmes d’inconfort !</p>
+                            <p class="card-text lead text-center">En effet la principale source de déperdition thermique d'un logement provient d'une mauvaise isolation que ce soit sous votre toiture,
+                                sous vos pieds ou par vos fenêtres et portes.</p>
+                            <p class="card-text lead text-center">Afin de conserver la chaleur en hiver et la fraîcheur en été, une rénovation performante vous apportera un confort thermique et acoustique optimal,
+                                tout en bénéficiant d’une meilleure qualité de l’air intérieur, sans aucune augmentation de factures !</p>
+                        </div>
+                    </div>
+                    
+                    <!--card empreinte carbone positive-->
+                    <div class="card border-success why blue-shadow load-speed-hidden">
+                        <img src="{{ asset('img/image.png') }}" class="card-img-top" alt="valorisation bien immobilier">
+                        <div class="card-body">
+                            <h5 class="display-4 my-title-card-why text-center">Laissez une empreinte carbone positive sur la planète !</h5>
+                            <p class="card-text lead text-center">Les travaux de rénovations énergétiques participent à la préservation de l’environnement.</p>
+                            <p class="card-text lead text-center">Afin d'évaluer la consommation d'énergie et les émissions de gaz à effet de serre de votre logement, il
+                                est recommandé (et même obligatoire dans le cas d'une vente ou d'une location) de faire un Diagnostic de Performance Energétique (DPE).</p>
+                            <p class="card-text lead text-center">Son objectif est de recueillir toutes les informations de votre habitat afin de mieux connaitre votre
+                                logement, d'estimer votre consommation d'énergie et de cibler les travaux les plus efficaces pour économiser l'énergie.</p>
+                            <p class="card-text lead text-center">Rénover son habitat, c'est réaliser une diminution des consommations d’énergies fossiles et donc
+                                une réduction de votre impact sur l’environnement. </p>
+                            <p class="card-text lead text-center">Un geste pour votre porte-monnaie comme pour l’environnement !</p>
+                        </div>
+                    </div>
+    
+                    <div class="card border-success why blue-shadow p-3 load-speed-hidden">
+                        <img src="{{ asset('img/shutterstock_662332231.jpg') }}" alt="image_terre_connecté"
+                             style="width:
+                        100%;height:
+                        100%;">
+                    </div>
+                    
+                    <!--Card anticipation réglementation-->
+                    <div class="card border-success why blue-shadow load-speed-hidden">
+                        <img src="{{ asset('img/002095116_620x393_c.jpg') }}" class="card-img-top" alt="valorisation bien immobilier">
+                        <div class="card-body">
+                            <h5 class="display-4 my-title-card-why text-center" id="title-to-reduce" ">Anticipez la
+                                réglementation
+                                thermique !</h5>
+                            <p class="card-text lead text-center">À l’heure actuelle, le gouvernement français planche sur
+                                toutes les alternatives possibles pour booster les rénovations énergétiques, y compris l’idée de mener
+                                une politique plus répressive.</p>
+                            <p class="card-text lead text-center">En effet, il est toujours question d’instaurer un bonus-malus de la consommation énergétique.</p>
+                            <p class="card-text lead text-center">Les exigences réglementaires pour la rénovation des bâtiments existants vont ainsi nécessairement devenir plus contraignantes à l'image de la
+                                réglementation qui s'applique aux nouvelles constructions.</p>
+                            <p class="card-text lead text-center">En optant pour une rénovation ambitieuse de type « bâtiment basse consommation »
+                                dès maintenant, vous anticipez les prochaines évolutions réglementaires !</p>
+                        </div>
+                    </div>
+                    
+                    <!--Ma card image-->
+                    <div class="card border-success why blue-shadow p-3 load-speed-hidden">
+                        <img src="{{ asset('img/image_info.png') }}" alt="shéma info énergie" style="width: 100%;height: 100%;">
+                    </div>
+                    
+                    <!--Ma deuxième card image-->
+                    <div class="card border-success why blue-shadow p-3 load-speed-hidden second">
+                        <img src="{{ asset('img/shutterstock_125570333.jpg') }}" alt="image_terre_connecté"
+                             style="width: 100%;height:
+                        100%;">
+                    </div>
+                    
+                    
+    
+
+          
+    
+                    
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

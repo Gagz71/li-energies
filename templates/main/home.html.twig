@@ -1,0 +1,251 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+
+
+    <div class="container-fluid">
+    
+        {# Affichage de tous les flash messages de type "success" #}
+        {% for message in app.flashes('success') %}
+            <div class="row">
+                <div class="m-auto">{{ message }}</div>
+            </div>
+        {% endfor %}
+        
+        
+        <!--Mon carousel-->
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active overlay" data-interval="50000">
+                    <img src="{{ asset('img/Photo1.jpg') }}" class="d-block w-100 overlay-img" alt="Terre connecté">
+                    <div class="overlay-title">
+                        <h1 class="title-item-carousel">Produisez et consommez votre propre
+                            électricité</h1>
+                    </div>
+                    <div class="carousel-caption d-md-block  ">
+                        
+                        <a href="{{ path('contact') }}" class="border-animation">
+                            <div class="border-animation__inner">Demandez votre devis</div></a>
+                    </div>
+                </div>
+                <div class="carousel-item overlay" data-interval="50000">
+                    <img src="{{ asset('img/energies-renouvelables-4_6234444.jpg') }}" class="overlay-img d-block
+                    w-100" alt="terre branché">
+                    <div class="overlay-title">
+                        <h1 class="title-item-carousel">Energie Solaire</h1>
+                    </div>
+                    <div class="carousel-caption d-md-block">
+                        <a href="{{ path('how_it_works') }}" class="border-animation">
+                            <div class="border-animation__inner">Comment ça marche ?</div></a>
+                    </div>
+                </div>
+                <div class="carousel-item overlay" data-interval="50000">
+                    <img src="{{ asset('img/img_71881.jpg') }}" class="d-block w-100 overlay-img" alt="panneaux sur toits">
+                    <div class="overlay-title">
+                        <h1 class="title-item-carousel">Equipez vous du soleil !</h1>
+                    </div>
+                    <div class="carousel-caption d-md-block">
+                        <a href="{{ path('electricity_production') }}" class="border-animation">
+                            <div class="border-animation__inner">En savoir plus</div></a>
+                    </div>
+                </div>
+                <div class="carousel-item overlay" data-interval="50000">
+                    <img src="{{ asset('img/eficiencia-energetica-600x360.jpg') }}" class="d-block w-100 overlay-img"
+                         alt="images-energies">
+                    <div class="overlay-title">
+                        <h1 class="title-item-carousel">Réduisez votre facture d'électricité</h1>
+                    </div>
+                    <div class="carousel-caption d-md-block">
+                        <a href="{{ path('contact') }}" class="border-animation ">
+                            <div class="border-animation__inner">Réalisez votre étude personnalisée</div></a>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+
+
+        <!--Ma seconde partie "solutions"-->
+        <div class="solutions-section">
+            <h1 class="custom-title text-center elegant-shadow">Nos Solutions énergétiques</h1>
+
+            <!--Mes 2 cards-->
+            <div class="row my-solutions-cards">
+                
+                
+                <div class="col-sm-6 my-cards">
+                    <div class="card mb-3  yellow-shadow svg-wrapper">
+                        <svg height="396" width="595" xmlns="http://www.w3.org/2000/svg">
+                            <rect class="shape1" height="396" width="595" />
+                            <rect class="shape2" height="396" width="595" />
+                        </svg>
+                        <div class="row no-gutters ">
+                            <div class="col-md-5">
+                                <img src="{{ asset('img/picto-elec-218.png') }}" class="card-img my-img-cards
+                                img-fluid" alt=".
+                                ..">
+                            </div>
+                            <div class="col-md-7">
+                                <div class="card-body font-baskerville">
+                                    <h1 class=" font-baskerville text-uppercase">L'électricité</h1>
+                                    <p class="card-text">Libérez vous de vos factures qui ne cessent d'augmenter ! </p>
+                                    <p class="card-text">Produisez et consommez votre propre électricité !</p>
+                                    <a href="{{ path('electricity_production') }}" class="btn-1
+                                    ">Découvrez nos solutions</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-sm-6 my-cards">
+                    <div class="card mb-3 yellow-shadow svg-wrapper ">
+                        <svg height="396" width="595" xmlns="http://www.w3.org/2000/svg">
+                            <rect class="shape1" height="396" width="595" />
+                            <rect class="shape2" height="396" width="595" />
+                            
+                        </svg>
+                        <div class="row no-gutters">
+                            <div class="col-md-5">
+                                <img src="{{ asset('img/picto-eau-crop-218.png') }}" class="card-img my-img-cards img-fluid"
+                                     alt="...">
+                            </div>
+                            <div class="col-md-7">
+                                <div class="card-body font-baskerville">
+                                    <h1 class="font-baskerville text-uppercase">L'eau chaude</h1>
+                                    <p class="card-text">Réalisez jusqu'à 75% d'économie d'énergie en produisant votre propre eau chaude sanitaire !</p>
+
+                                    <a href="{{ path('water_heater') }}" class="btn-1">Remplacez votre chauffe-eau</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Ma section services-->
+        <div class="services-section">
+
+            <div class="text-center">
+                <h1 class="custom-title elegant-shadow">Nos Services</h1>
+
+                <p class="font-helvetica p-note">Réalisez vos travaux de rénovation énergétique en toute sérénité.</p>
+                <p class="font-helvetica p-note">De l'avant à l'après-projet, <span class="li-energies">LI
+                                                                                                      .ENERGIES</span> est là pour vous accompagner.</p>
+            </div>
+
+            <!--Mon système d'onglets pour présenter les étapes du projet-->
+            <div class="tab-system d-flex flex-column">
+                <!--Mes titres d'onglets-->
+                <div class="tabs-area m-auto">
+                    <div data-view="1" class="tab active">Etude personnalisée sur site</div>
+                    <div data-view="2" class="tab">Contrôle Qualité</div>
+                    <div data-view="3" class="tab">Visite Technique</div>
+                    <div data-view="4" class="tab">Bureau d'études</div>
+                    <div data-view="5" class="tab">Traitement du dossier</div>
+                </div>
+
+                <!--Mes contenus d'onglets-->
+                <div class="views-area d-flex flex-column">
+                    <div class="view text-center">
+                        <h3 class="">Etude des besoins énergétiques </h3>
+                        <p>Afin de vous proposer la solution la plus adaptée à vos besoins énergétiques, <span class="li-energies">Li.Energies</span> étudie
+                            chaque dossier directement sur site.
+                            <br>Cela permet de trouver le système nécessaire répondant vraiment aux besoins du foyer.</p>
+                    </div>
+                    <div class="view text-center">
+                        <h3>Validation du projet par un expert en charge du contrôle qualité</h3>
+                        <p>Un expert <span class="li-energies">Li.Energies</span> vérifie avec vous les informations nécessaires au projet afin de valider
+                            la solution proposée, tout en vous apportant des informations complémentaires.
+                            <br>Après vérification du dossier complet, il peut ainsi planifier avec vous, la date de
+                            visite technique.</p>
+                    </div>
+                    <div class="view text-center">
+                        <h3>Validation du projet par un expert technique</h3>
+                        <p>Un technicien spécialisé réalise sur site un relevé technique avec prise de mesures. <br>
+                        Ce relevé, indispensable à la réalisation du projet, est ensuite envoyé au bureau d'études.</p>
+                    </div>
+                    <div class="view text-center">
+                        <h3>Edition du livret technique personnalisé</h3>
+                        <p>Le bureau d'études effectue une analyse des informations recueillies dans le dossier. <br>
+                        Pour chaque cas, il en édite un livret technique. </p>
+                    </div>
+                    <div class="view text-center">
+                        <h3>Gestion administrative et financière du dossier</h3>
+                        <p>Le dossier complet est soumis à l'approbation finale de l'administration locale. <br>
+                            <span class="li-energies">Li.Energies</span> s'occupe de la gestion de l'ensemble des démarches.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="tab-system d-flex flex-column">
+                <div class="tabs-area m-auto">
+                    <div data-view="1" class="tab active">Pose et mise en service</div>
+                    <div data-view="2" class="tab">Mise sous contrôle</div>
+                    <div data-view="3" class="tab">Consuel</div>
+                    <div data-view="4" class="tab">Visite de contrôle annuelle</div>
+                    <div data-view="5" class="tab">Assistances</div>
+                </div>
+
+                <div class="views-area">
+                    <div class="view text-center">
+                        <h3>Installation du sytème</h3>
+                        <p>Le jour J, des techniciens qualifiés procèdent à la mise en place du système selon le cahier des charges établit au préalable.
+                            <br>Une fois installé, votre système est immédiatement mis en service et commence à produire sa propre énergie !</p>
+                    </div>
+
+                    <div class="view text-center">
+                        <h3>Visualisation de votre production en temps réel</h3>
+                        <p>La mise en contrôle de l'état de fonctionnement de votre système et de votre production s'effectue grâce à une application. <br>
+                        Elle vous permet ainsi d'intervenir à distance sur votre système.</p>
+                    </div>
+
+                    <div class="view text-center">
+                        <h3>Contrôle de conformité de l'installation</h3>
+                        <p>Le Consuel effectue la validation de la bonne exécution du raccordement au réseau public de distribution électrique.
+                            <br> A la suite de quoi, il établit une attestation de conformité aux prescriptions de sécurité en vigueur de cette installation.</p>
+                    </div>
+                    <div class="view text-center">
+                        <h3>Contrôle technique régulier</h3>
+                        <p>L'installation terminée, <span class="li-energies">Li.Energies</span> reste à vos côtés !
+                            <br>Un technicien se déplace ainsi chaque année chez vous, afin de réaliser un contrôle du bon fonctionnement du sytème. </p>
+                    </div>
+                    <div class="view text-center">
+                        <h3>Réponse et intervention rapide</h3>
+                        <p>Pour répondre à vos questions et vos demandes, <span class="li-energies">Li.Energies</span> se tient continuellement à votre disposition.
+                            <br>Nos services sont ouverts du lundi au vendredi de 8h à 20h, et le samedi de 8h à 13h.</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!--Ma dernière section av mon bouton de contacte-->
+        <div class="last-section-contact d-flex">
+            <a href="{{ path('contact') }}" class="" id="btn">Contactez-nous dès maintenant !</a>
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+{% endblock %}

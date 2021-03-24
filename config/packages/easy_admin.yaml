@@ -1,0 +1,15 @@
+easy_admin:
+    formats:
+        date:     'd/m/Y'           # Format d'affichage des dates
+        time:     'H:i:s'           # Format d'affichage des heures/minutes/secondes
+        datetime: 'd/m/Y H:i:s'     # Format d'affichage des datetime
+    site_name: 'Gestion des demandes de contact'
+    design:
+        form_theme:
+            - "@EasyAdmin/form/bootstrap_4.html.twig"           # Active le thème de bootstrap 4 pour l'apparence des formulaires
+#            - "@FOSCKEditor/Form/ckeditor_widget.html.twig"     # Active le thème de ckeditor pour les champs ckeditor
+        brand_color: 'black'        # Couleur principale du backoffice (boutons, icônes, etc...)
+    entities:
+        User:
+            class: App\Entity\User
+            label: 'Utilisateurs'

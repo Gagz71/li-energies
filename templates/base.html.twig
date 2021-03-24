@@ -1,0 +1,215 @@
+{% set currentRoute = app.request.attributes.get('_route') %}
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Nouvelle page{% endblock %} - Li.Energies</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/style-home-base-form.css') }}">
+        <!--Liens favicon-->
+        <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <script src="https://unpkg.com/scrollreveal"></script> <!--Balise script du ScrollReveal à mettre dans le
+        head d'après leur site-->
+        <script>
+            ScrollReveal({ duration: 5000 })
+        </script>
+        c
+    </head>
+    <body class="">
+        <div class="container-fluid">
+
+            <div class="row bg-dark fixed-top">
+                <!--Ma mini navbar du haut-->
+                <ul class="nav justify-content-around bg-mini-nav">
+                    <li class="nav-item">
+                        <span class="nav-link"><i class="fas fa-phone-alt"></i> 06.69.49.69.14.</span>
+                    </li>
+                    <li class="nav-item">
+                        <span class="nav-link"><i class="far fa-handshake"></i> Votre partenaire autoconso !</span>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ path('contact') }}" class="mini-nav-btn blue-shadow">Demandez votre devis</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="row bg-light pt-5">
+                <!--Ma navbar avec le logo du site-->
+                <!-- Image and text -->
+                <nav class="navbar navbar-expand-lg navbar-light" id="remontada">
+                    <button class="navbar-toggler blue-shadow" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+        
+        
+        
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                        <a class="navbar-brand" href="{{ path('home') }}">
+                            <img src="{{ asset('img/logofav1trans.png') }}" class="d-inline-block align-top" alt="" loading="lazy">
+                        </a>
+                        <ul class="navbar-nav">
+                
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    L'énergie solaire</a>
+                                <div class="dropdown-menu bg-light" aria-labelledby="dropdownMenuLink">
+                                    <a class="dropdown-item nav-link text-center" href="{{ path('how_it_works') }}">Comment ça
+                                        marche
+                                        ?</a>
+                                    <a class="dropdown-item nav-link text-center" href="{{ path('why_renovate') }}">Pourquoi
+                                        rénover son habitat ?</a>
+                                </div>
+                            </li>
+                
+                            <li class="nav-item dropdown">
+                                <a class="dropdown-toggle nav-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Nos solutions énergétiques</a>
+                                <div class="dropdown-menu bg-light" aria-labelledby="dropdownMenuLink">
+                                    <a class="dropdown-item nav-link text-center" href="{{ path('electricity_production') }}">Produire
+                                        et consommer son électricité</a>
+                                    <a class="dropdown-item nav-link text-center" href="{{ path('water_heater') }}">Produire et
+                                        consommer son eau chaude </a>
+                                </div>
+                            </li>
+                
+                
+                            <li class="nav-item {{ currentRoute == 'society' ? ' active' : '' }}">
+                                <a class="nav-link" href="{{ path('society') }}">La société</a>
+                            </li>
+                            <li class="nav-item {{ currentRoute == 'contact' ? ' active' : '' }}">
+                                <a class="nav-link" href="{{ path('contact') }}">Contactez-nous</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            
+
+            
+
+        </div>
+
+        {% block body %}{% endblock %}
+
+
+        <script src="{{ asset('js/jquery-3.5.1.slim.min.js') }}"></script>
+        <script src="{{ asset('js/popper.min.js') }}"></script>
+        <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('js/script.js') }}"></script>
+        <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+        {% block javascripts %}{% endblock %}
+    </body>
+    
+    <!--Mon Footer-->
+    <footer class="bg-light d-flex">
+        
+        <div class="row font-helvetica" id="content-footer">
+            <div class="col-3 ">
+                <p class="h6 footer-title">A propos</p>
+                <hr class="footer-hr">
+                <p class="footer-content-first"><span class="li-energies">Li.Energies</span>  est une entreprise spécialisée dans les
+                    solutions de gestion de l'énergie. <br>
+                    Entité du groupe <a href="https://www.inogreen.fr/" class="footer-link" title="Voir leur site internet">
+                        Inogreen</a>, <span class="li-energies">Li.Energies</span> est là pour vous proposer des solutions à la fois économique et écologique,
+                    adpatées aux besoins de votre site.
+                    <br> Que vous soyez un particulier ou professionnel, <span class="li-energies">Li.Energies</span> s'occupe de toutes les démarches et vous accompagne
+                    du début à la fin de votre projet de rénovation énergétiques.</p>
+            </div>
+            <div class="col-3 ">
+                <p class="h6 footer-title">Les offres de <span class="li-energies">Li.Energies</span></p>
+                <hr class="footer-hr">
+                <p class="footer-content-second text-center"><a href="{{ path('why_renovate') }}" class="footer-link">Rénovations Energétiques</a></p>
+                <p class="footer-content-second text-center"><a href="{{ path('electricity_production') }}" class="footer-link">Produire sa propre électricité</a></p>
+                <p class="footer-content-second text-center"><a href="{{ path('water_heater') }}" class="footer-link">Produire sa propre eau chaude</a></p>
+            </div>
+            <div class="col-3 ">
+                <p class="h6 footer-title"><a href="{{ path('contact') }}" class="footer-link">Contactez-nous</a></p>
+                <hr class="footer-hr">
+                <div class="footer-logos">
+                    <img src="{{ asset('img/Logo2.png') }}" alt="">
+                </div>
+                <p class="footer-content-second">37 rue Edith Cavell
+                    <br>71200 Le Creusot</p>
+                <p class="footer-content-second"><i class="fas fa-mobile-alt"></i><a href="tel:+33669496914"
+                                                                                     class="footer-link"> 06.69.49.69.14.</a>
+                <br><i class="fas fa-envelope"></i><a href="mailto:contact.lienergies@gmail.com" class="footer-link"> contact.lienergies@gmail.com</a> </p>
+            </div>
+            <div class="col-3 ">
+                <!--TODO: titre à changer-->
+                <p class="h6 footer-title">MENTIONS LEGALES</p>
+                <hr class="footer-hr">
+                <p class="footer-content-second"><a href="{{ path('legals_conditions')
+                    }}"class="footer-link">Conditions d'utilisations des données</a></p>
+                <p class="footer-content-second"><a href="{{ path('legals_conditions') }}"class="footer-link">Politique de
+                        confidentialité</a></p>
+                <div class="footer-content-logos">
+                    <div class="social-button">Suivez-nous</div>
+                    <div class="social facebook"><a href="#" class="footer-socials "><i class="fab fa-facebook-square"></i></a></div>
+                    <div class="social instagram"><a href="#" class="footer-socials "><i class="fab fa-instagram"></i></a></div>
+                    <div class="social twitter"><a href="#" class="footer-socials "><i class="fab fa-twitter"></i></a></div>
+                </div>
+    
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                    <defs>
+                        <filter id="goo">
+                            <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />
+                            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+                            <feBlend in="SourceGraphic" in2="goo" />
+                        </filter>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+        <div class="row">
+            <span class="credits">©2020 NoManh'Sland</span>
+
+        </div>
+    
+        <script>
+            //Animation du bouton des réseaux sociaux
+            $('.social-button').click(function(){
+                $('.social.twitter').toggleClass('clicked');
+                $('.social.facebook').toggleClass('clicked');
+                $('.social.instagram').toggleClass('clicked');
+
+            });
+        </script>
+
+
+
+
+    </footer>
+
+    <!--Ma flèche pour remonter en haut de la page-->
+    <div class="fleche">
+        <a href="#remontada">
+            <img class="mop" src="{{ asset('img/flèche-haut.png') }}"  alt="image">
+        </a>
+        <!--positionnement
+            Flux html : Principe qui fait que tout element remontent naturellement vers le haut a gauche
+            static: cas par defaut, sans changement de propriete.
+            relative: permet de positionner l'element avec top bottom, left et right par rapport a son parent direct en restant dans le flux
+            absolute: permet de positionner l'element avec top bottom, left et right par rapport a son parent relatif/absolute direct en sortant du flux
+            fixed: permet de positionner l'element avec top bottom, left et right par rapport a la fenetre du navigateur en sortant du flux
+            (sticky : permet de positionner l'element avec top bottom, left et right par rapport a la fenetre du navigateur, dans les limites des bordures de son parent direct)-->
+
+    </div>
+
+</html>

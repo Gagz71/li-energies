@@ -1,0 +1,148 @@
+{# Cette page utilise le squelette de la page base.html.twig #}
+{% extends 'base.html.twig' %}
+
+{# Remplissage du block title avec le titre de la page #}
+{% block title %}Mon espace client{% endblock %}
+
+{% block stylesheets %}<link rel="stylesheet" href="{{ asset('css/style-customer.css') }}">{% endblock %}
+
+
+{# Remplissage du block body avec le contenu de la page #}
+{% block body %}
+
+<div class="container-fluid">
+    
+    {# Affichage de tous les flash messages de type "success" #}
+    {% for message in app.flashes('success') %}
+        <div class="row">
+            <div class="m-auto">{{ message }}</div>
+        </div>
+    {% endfor %}
+    
+    <h1 class="text-center custom-title">Mon espace client</h1>
+    
+    <div class="row flex-column">
+        <!--Titre-->
+        <div class="col-6 m-auto">
+            <div class="list-group" id="list-tab" role="tablist">
+                
+                <a class="list-group-item list-group-item-action active" id="list-profile-list" data-toggle="list"
+                   href="#list-profile" role="tab" aria-controls="profile">Mes informations personnelles</a>
+                
+                <a class="list-group-item list-group-item-action " id="list-add-list" data-toggle="list"
+                   href="#list-add" role="tab" aria-controls="add">Ecrire un nouveau message</a>
+    
+    
+                <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list"
+                   href="#list-messages" role="tab" aria-controls="messages">Messages envoyés {% if messagesCustomer is
+                        empty %}<span class="badgebadge-info">Aucun message envoyé.</span>{% else %}
+                    {% for messageCustomer in app.user.messages %}
+{#                        TODO: modifier en simple count, for inutile#}
+                    <span class="badge badge-info">{{ messagesCustomer.getTotalItemCount }}{% endfor %}</a>{% endif %}
+
+                
+                
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list"
+                   href="#list-settings" role="tab" aria-controls="settings">Paramètres</a>
+            </div>
+        </div>
+        
+        <!--view-->
+        <div class="col-5 m-auto pt-5">
+            <div class="tab-content" id="nav-tabContent">
+                
+                <!--Partie infos du client-->
+                <div class="tab-pane fade show active" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Numéro de contrat Li-Energies: <span class="text-info">{{ app
+                                .user.contractNumber }}</span></li>
+                        <li class="list-group-item ">Adresse email: <span class="text-info">{{ app.user.email
+                                }}</span></li>
+                        <li class="list-group-item">Adresse du site de l'installation du système: <span class="text-info">{{ app
+                                .user.address }} {{ app.user.zipCode }}</span></li>
+                        <li class="list-group-item">Numéro de téléphone renseigné: <span class="text-info">{{ app
+                                .user.phoneNumber }}</span></li>
+                        <li class="list-group-item">Solutions énergétiques adoptés: <span class="text-info">{{ app
+                                .user.solutionsType }}</span></li>
+                        <li class="list-group-item">Type d'autoconsommation adopté: <span class="text-info">{{ app
+                                .user.selfConsumptionType }}</span></li>
+                    </ul>
+                </div>
+    
+                <!--Partie écrire nouveau message-->
+                <div class="tab-pane fade " id="list-add" role="tabpanel" aria-labelledby="list-add-list">
+    
+                    <div class="card border-success mb-3">
+                        <div class="card-header">Besoin d'assistance ?</div>
+                        <div class="card-body text-success">
+                            <h5 class="card-title">Contactez-nous via ce formulaire !</h5>
+                            <p class="card-text">{{ form(MessageCustomerForm) }}</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-success"><span class="li-energies">Li.Energies</span> vous recontactera
+                            dans de plus bref délais. Merci de votre confiance !</div>
+                    </div>
+                </div>
+                
+                <!--Partie messages envoyés-->
+                <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+    
+                    {% if app.user.messages is empty %}
+                        <div class="alert alert-info" role="alert">
+                            Aucun message envoyé. <a href="#" class="alert-link">Cliquez-ici</a> pour contacter Li
+                            .Energies.
+                        </div>
+                    {% else %}
+                        {% for messageCustomer in app.user.messages %}
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ messageCustomer.subject }}</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">Envoyé le {{ messageCustomer
+                                        .messageDate|date('d/m/Y à H\\hi') }}</h6>
+                                    <p class="card-text">{{messageCustomer.message}}</p>
+                                    
+                                    
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <div class="d-inline-block">
+                                    <div class="my-3 text-center">
+                                        <div class="d-inline-block">
+                                            {# Affichage du menu permettant de naviguer entre les différentes pages #}
+                                            {{ knp_pagination_render(messagesCustomer) }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+                
+                
+                
+                
+                <!--Partie Settings-->
+                <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">...</div>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+{% endblock %}
+
+{% block javascripts %}
+    <!--Script js nécessaire aux fonctionnement des modals de Bootstrap-->
+    <script>
+        $('#exampleModal').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget) // Button that triggered the modal
+            var recipient = button.data('whatever') // Extract info from data-* attributes
+            // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+            // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+            var modal = $(this)
+            modal.find('.modal-title').text('New message to ' + recipient)
+            modal.find('.modal-body input').val(recipient)
+        })
+    </script>
+{% endblock %}

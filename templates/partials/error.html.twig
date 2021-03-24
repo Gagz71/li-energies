@@ -1,0 +1,10 @@
+{# page qui va gérer les messages d'erreur et qu'on aura juste à inclure dans nos différentes pages pour les afficher#}
+
+{#S'il existe en mémoire des messages flash de type error, on les affiche tous avec une boucle#}
+{% for message in app.flashes('error') %}
+
+    <div class="row">
+        <div class="alert alert-error text-center col-12 my-2 m-auto">{{ message }}</div>
+    </div>
+
+{% endfor %}

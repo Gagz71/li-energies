@@ -1,0 +1,163 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Production d'électricité{% endblock %}
+
+{% block stylesheets %}<link rel="stylesheet" href="{{ asset('css/style-p-elec-water.css') }}">{% endblock %}
+
+{% block body %}
+
+    <div class="container-fluid">
+
+        <h1 class="text-center display-3 main-title-elec ">Produisez et consommez votre propre électricité</h1>
+
+
+        <div class="bg-img-electricity row">
+            
+            <div class="bg-electricity-opacity p-1">
+
+                <h2 class="text-center display-4 load-hidden title-elec">Laissez le soleil vous éclairer, <span class="li-energies">Li.Energies</span> vous en assure sa production d'électricité </h2>
+
+                <div class="row flex-column custom-div mb-5">
+
+                    <!--ma card présentation système-->
+                    <div class="card col-6 col-md-8 offset-2 m-auto card-system-psentation load-speed-hidden">
+                    <div class="card-body">
+                        <h5 class="display-4 text-center">Un système fiable</h5>
+                        <p class="lead text-center">Grâce à nos systèmes, les panneaux solaires produisent l'électricité qui est directement injectée dans l'installation électrique du foyer.<br>
+                            Le surplus de production est quand à lui soit stockée dans la <a style="text-decoration: underline;text-decoration-style: dotted;" class="link-pop" role="button" data-toggle="popover" title="Autoconsommation totale" data-content="L'énergie non consommée
+                    pendant la journée est stockée dans une batterie Stocklys, pour répondre à une partie des besoins du foyer lorsque les panneaux ne produisent plus.">batterie</a>, soit
+                            <a style="text-decoration: underline;text-decoration-style: dotted;" class="link-pop" role="button" data-toggle="popover" title="Autoconsommation partielle" data-content="L'énergie non consommée est alors injecté sur le réseau
+                     de distribution national. Ce surplus peut être vendue ou donné (selon le contrat), partiellement ou totalement.">revendu </a> sur le réseau national.<br>
+                        Grâce à la technologie utilisée, chaque foyer peut contrôler en ligne la production de son électricité.<br>
+                        La production du système est stable et varie très peu d'une année sur l'autre.<br>
+                        Un système fiable, qui ne dispose d'aucune mécanique en mouvement et qui résiste parfaitement aux intempéries.</p>
+                    </div>
+                    </div>
+
+                    <!--mon bouton lien-->
+                    <div class="my-btn-link m-auto">
+                        <a href="{{ path('how_it_works') }}" class="blue-shadow m-auto lead load-hidden"
+                       id="link-to-how">Comment ça marche ?</a>
+                    </div>
+                </div>
+                <!--Mes shémas explicatifs-->
+                <div class="row m-auto pb-3">
+                    
+                    <div class="col-6 div-title-shema">
+                        <h5 class="display-4 text-center load-very-speed-hidden title-shema">Système en
+                            autoconsommation avec
+                            stockage</h5>
+                        <img src="{{ asset('img/dessin/shéma_système_stockage.png') }}" alt="shéma_système_stockage" class="dessin-explain load-speed-hidden">
+                    </div>
+                    <div class="col-6 div-title-shema">
+                        <h5 class="display-4 text-center load-very-speed-hidden title-shema">Système en
+                            autoconsommation avec
+                            revente</h5>
+                        <img src="{{ asset('img/dessin/shéma_système_revente.png') }}" alt="shéma_système_revente" class="dessin-explain load-speed-hidden">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <!--partie autoconso totale-->
+        <div class="row flex-column pt-5">
+
+            <div class="col-6 m-auto">
+                <h5 class="display-4 text-center load-speed-hidden title-sys">LE SYSTEME EN AUTONOMIE TOTALE <span class="li-energies">LI.ENERGIES</span> COMPREND :</h5>
+            </div>
+
+            <div class="row flex-row pt-5">
+                <div class="col-8 m-auto d-flex flex-column div-equipments">
+
+                    <div class="row div-equipments">
+                        <img src="{{ asset('img/équipements/panneaux_solaires.png') }}" alt="panneau-solaire" class="img-equipements load-speed-hidden">
+                        <div class="col-6">
+                            <p class="lead load-very-speed-hidden lead-title text-center">Capteur Solaire</p>
+                            <p class="lead load-very-speed-hidden ">Les capteurs sont composés de cellules qui
+                                convertissent les rayons du soleil en électricité.</p>
+                        </div>
+                    </div>
+
+                    <div class="row pt-5 div-equipments">
+                        <img src="{{ asset('img/équipements/Batterie Stocklys v2 FACE.png') }}" alt="batterie-stocklys" class="img-equipements load-speed-hidden">
+                        <div class="col-6">
+                            <p class="lead load-very-speed-hidden lead-title text-center">Batterie</p>
+                            <p class="lead load-very-speed-hidden">Couplée à l'installation, la batterie permet de stocker l'énergie non consommée pendant la journée
+                            et de la restituer lors de besoins plus conséquents.<br>
+                            Equipé d'un onduleur embarqué, la batterie permet de convertir efficacement l'énergie du courant continu en courant alternatif.<br>
+                            L'onduleur gère la production du système et la répartition de l'énergie produite en toute autonomie selon les besoins nécessaires.<br>
+                            La batterie s'autoajuste à votre consommation, évitant ainsi toute perte d'énergie diluée dans le réseau.</p>
+                        </div>
+                    </div>
+                    <div class="row pt-5 div-equipments">
+                        <img src="{{ asset('img/équipements/portail_de_suivi.png') }}" alt="portail-de-suivi" class="img-equipements load-hidden">
+                        <div class="col-6">
+                            <p class="lead load-very-speed-hidden lead-title text-center">Portail de suivi</p>
+                            <p class="lead load-very-speed-hidden">Le portail de suivi vous permet de visualiser en temps réel les performances du système.<br>
+                            Accessible en permanence, il vous informe sur le rendement énergétique de votre installation et vous fournit les performances de production tout au long de l'année.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--partie autoconso partielle-->
+        <div class="row flex-column pt-5">
+
+            <div class="col-6 m-auto">
+                <h5 class="display-4 text-center load-speed-hidden title-sys">LE SYSTEME EN AUTONOMIE PARTIELLE <span class="li-energies">LI.ENERGIES</span> COMPREND :</h5>
+            </div>
+
+            <div class="row flex-row pt-5">
+                <div class="col-8 m-auto d-flex flex-column ">
+
+                    <div class="row div-equipments">
+                        <img src="{{ asset('img/équipements/panneaux_solaires.png') }}" alt="panneau-solaire" class="img-equipements load-speed-hidden">
+                        <div class="col-6">
+                            <p class="lead load-very-speed-hidden lead-title text-center">Capteur Solaire</p>
+                            <p class="lead load-very-speed-hidden ">Les capteurs sont composés de cellules qui convertissent les rayons du soleil en électricité.</p>
+                        </div>
+                    </div>
+
+                    <div class="row pt-5 div-equipments">
+                        <img src="{{ asset('img/équipements/optimiseur.png') }}" alt="optimiseur" class="img-equipements load-speed-hidden">
+                        <div class="col-6">
+                            <p class="lead load-very-speed-hidden lead-title text-center">Optimiseur</p>
+                            <p class="lead load-very-speed-hidden">L'optimiseur de puissance se connecte à chaque panneau solaire ce qui leur permet de fonctionner au maximum de leurs capacités.<br>
+                            Il fournit ainsi un rendement plus important, une sécurité renforcée et un retour d'information constant sur l'état de fonctionnement de l'installation.</p>
+                        </div>
+                    </div>
+                    <div class="row pt-5 div-equipments">
+                        <img src="{{ asset('img/équipements/onduleur.png') }}" alt="onduleur" class="img-equipements load-speed-hidden">
+                        <div class="col-6">
+                            <p class="lead load-very-speed-hidden lead-title text-center">Onduleur</p>
+                            <p class="lead load-very-speed-hidden">L'onduleur est le cerveau de l'installation photovoltaïque.<br>
+                            Il convertit efficacement l'énergie du courant continu en courant alternatif pour une utilisation quotidienne.<br>
+                            L'onduleur gère la production du système et la répartition de l'énergie produite en toute autonomie !</p>
+                        </div>
+                    </div>
+                    <div class="row pt-5 div-equipments">
+                        <img src="{{ asset('img/équipements/portail_de_suivi.png') }}" alt="portail-de-suivi" class="img-equipements load-speed-hidden">
+                        <div class="col-6">
+                            <p class="lead load-very-speed-hidden lead-title text-center">Portail de suivi</p>
+                            <p class="lead load-very-speed-hidden">Le portail de suivi vous permet de visualiser en temps réel les performances du système.<br>
+                                Accessible en permanence, il vous informe sur le rendement énergétique de votre installation et vous fournit les performances de production tout au long de l'année.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    
+        <h1 class="display-4 text-center mt-5 load-speed-hidden">N'attendez plus !</h1>
+    
+        <div class="last-section-contact d-flex">
+            <a href="/contactez-nous" class="blue-shadow load-hidden" id="last-button">Je veux consommer ma propre
+                électricité !
+            </a>
+        </div>
+
+    </div>
+
+{% endblock %}

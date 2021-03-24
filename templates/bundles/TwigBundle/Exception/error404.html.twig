@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+{% block title %}Erreur 404{% endblock %}
+{% block body %}
+    
+    <div class="container-fluid">
+    
+        <h1 class="display-4 text-center">Cette page n'existe pas ..</h1>
+    
+        <div class="last-section-contact d-flex">
+            <a href="{{ path('home') }}" class="blue-shadow load-hidden" id="last-button">Retour à la page d'accueil
+            </a>
+        </div>
+        
+    </div>
+
+{% endblock %}

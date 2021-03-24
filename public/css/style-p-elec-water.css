@@ -1,0 +1,208 @@
+/*Page Electricité*/
+.main-title-elec {
+    color: #5b6b73;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin: auto;
+}
+
+.bg-img-electricity{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background-image: url("../img/developpement-durable-1024x609.png");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.bg-electricity-opacity{
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.title-elec{
+    margin: auto;
+    padding: 5rem;
+    color: #5b6b73;
+}
+
+.img-equipements{
+    width: 25%;
+    margin: auto;
+}
+
+.custom-div{
+    width: 100%;
+}
+
+.load-hidden {
+    visibility: hidden;
+}
+
+#link-to-how{
+    color: #5b6b73;
+    text-shadow: 0px -1px 0px rgba(30, 30, 30, 0.8);
+    background: rgb(9,121,105);
+    background: linear-gradient(90deg, rgba(9,121,105,1) 0%, rgba(140,236,250,1) 21%, rgba(128,251,99,1) 85%);
+    border-radius: 5px;
+    height: 7rem;
+    font-size: 2.1rem;
+    padding: 1rem;
+}
+#link-to-how:hover{
+    text-decoration: none;
+    color: darkcyan;
+}
+
+.card-system-psentation{
+    background-color: transparent;
+    border: none;
+}
+
+.lead-title{
+    font-size: 3rem;
+}
+
+.dessin-explain{
+    width: 100%;
+}
+
+/*Page eau chaude*/
+.bg-img-water{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background-image: url("../img/energie-renouvelable-quest-ce-que-la-geothermie.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.title-to-enlarge{
+    font-size:4.5rem;
+}
+
+.list-group-item{
+    background-color: transparent;
+}
+
+.my-accordion-btn{
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.transparent-card{
+    background-color: transparent;
+}
+
+/*Media Queries*/
+
+/*Format Mobile*/
+@media screen and (min-width: 320px) and (max-width: 600px){
+    /*P.Electricité*/
+    .main-title-elec{
+        font-size: 3.2rem;
+    }
+    .bg-img-electricity{
+        background-image: url("../img/petite_terre.png");
+    }
+    .title-elec{
+        padding: 5px;
+        font-size: 3rem;
+    }
+    .col-6{
+        max-width: 100%;
+
+    }
+    .popover{
+        max-width: 200px;
+    }
+    #link-to-how{
+        font-size: 1.5rem;
+        padding: 1.3rem;
+    }
+    .title-shema{
+        font-size: 2.4rem;
+    }
+    .title-sys{
+        font-size: 3rem;
+    }
+    .div-equipments{
+        padding: 0;
+        flex-direction: column;
+    }
+    .img-equipements{
+        width: 70%;
+    }
+    /*Page Eau chaude*/
+    .title-to-responsive{
+        width: 100%;
+    }
+    div.bg-img-water.row.flex-column.text-white div.row.mb-5{
+        flex-direction: column;
+        width: 100%;
+    }
+    div.bg-img-water.row.flex-column.text-white div.row.mb-5 div.col-4.d-flex.justify-content-end{
+        margin: auto;
+    }
+    div.bg-img-water.row.flex-column.text-white div.row.mb-5 div.card.col-6.m-auto.card-system-psentation.load-speed-hidden div.card-body h5.display-4{
+        font-size: 2.151rem;
+
+    }
+    div.bg-img-water.row.flex-column.text-white div.row.m-auto h2.display-4.load-hidden{
+        font-size: 3rem;
+        text-align: center;
+    }
+    .title-to-enlarge{
+        font-size: 2.5rem;
+    }
+    div.bg-img-water.row.flex-column.text-white div.row.mb-5.flex-column div.row.mt-5{
+        flex-direction: column;
+    }
+    div.bg-img-water.row.flex-column.text-white div.row.mb-5.flex-column div.row.mt-5 div.col-6.d-flex img.load-speed-hidden.m-auto{
+        width: 90%;
+    }
+    div.bg-img-water.row.flex-column.text-white div.row.mb-5.flex-column div.row.mt-5 div.col-6.load-speed-hidden{
+        padding-left: 50px;
+    }
+    html.sr body.bg-custom div.container-fluid div.row.flex-column div.col-8.m-auto.pt-5 h2.display-4.load-hidden.text-center{
+        font-size: 3rem;
+    }
+}
+/*Format Tablette*/
+@media screen and (min-width: 601px) and (max-width: 1006px){
+    /*P.Electricité*/
+    .col-6{
+        max-width: 80%;
+    }
+    .div-title-shema{
+        margin: auto;
+    }
+    .img-equipements{
+        width: 50%;
+    }
+
+    /*P.Eau chaude*/
+    div.bg-img-water.row.flex-column.text-white div.row.mb-5{
+        width: 90%;
+        margin: auto;
+        flex-direction: column;
+    }
+    div.bg-img-water.row.flex-column.text-white div.row.mb-5 div.col-4.d-flex.justify-content-end{
+        max-width: 60%;
+        margin: auto;
+    }
+    div.bg-img-water.row.flex-column.text-white div.row.mb-5.flex-column div.row.mt-5 div.col-6.d-flex{
+        margin: auto;
+    }
+    div.bg-img-water.row.flex-column.text-white div.row.mb-5.flex-column div.row.mt-5 div.col-6.load-speed-hidden{
+        margin: auto;
+    }
+    div.bg-img-water.row.flex-column.text-white div.row.mb-5 div.col-4.d-flex.justify-content-end img.load-speed-hidden{
+        margin: auto;
+    }
+    bg-img-water.row.flex-column.text-white div.row.mb-5 div.card.col-6.m-auto.card-system-psentation.load-speed-hidden div.card-body h5.display-4.text-center{
+        font-size: 2.9rem;
+    }
+    div.bg-img-water.row.flex-column.text-white div.row.m-auto h2.display-4.load-hidden{
+        text-align: center;
+    }
+}

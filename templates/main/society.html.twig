@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Notre Société{% endblock %}
+
+{% block stylesheets %}<link rel="stylesheet" href="{{ asset('css/style-society-cgu.css') }}">{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+    
+        <h1 class="text-center display-3 main-title-elec ">Qui sommes-nous ? </h1>
+        
+        <div class="society-presentation text-center">
+            <p class="lead">L'histoire de la société <span class="li-energies">Li.Energies</span>  débutent en 2016, grâce à un jeune
+                entrepreneur qui, fort de son expérience professionnelle dans le domaine du photovoltaïque,est convaincu de l'avenir des énergies renouvelables.
+            </p>
+            <p class="lead">Entité du groupe INOGREEN, <span class="li-energies">LI.ENERGIES</span> se spécialise dans la mise en place de solutions de rénovations énergétiques, en proposant la vente et l'installation
+                d'équipements photovoltaïques, des systèmes qui permettent aux particuliers comme aux entreprises, de réaliser des économies considérables en produisant
+                et en consommant son électricité et son eau chaude.</p>
+            <p class="lead">Désireux de devenir un acteur majeur à la protection et la préservation de notre planète, <span class="li-energies">LI.ENERGIES</span> propose des offres associant performance énergétique et
+                confort d’utilisation tout en garantissant un service irréprochable.</p>
+            <p class="lead">Montage, financement, approvisionnement, maintenance, <span class="li-energies">LI.ENERGIES</span> s'occupe de tout du début à la fin, pour une rénovation rapide, aisée et efficace !
+            </p>
+        </div>
+    
+        <!--Ma dernière section av mon bouton de contacte-->
+        <div class="last-section-contact d-flex">
+            <a href="{{ path('contact') }}" class="blue-shadow" id="last-button">Contactez-nous dès maintenant !</a>
+        </div>
+        
+        
+    
+    
+    
+    </div>
+
+{% endblock %}
